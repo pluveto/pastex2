@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.staticfile.org/prism/1.23.0/components/prism-core.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/pastex.min.css">
+
+    <title>Paste v2</title>
+</head>
+
+<body>
+    <div class="c">
+        <h1 class="site-name"><a href="/">Paste X <small>v2</small></a></h1>
+
+        <div class="row">
+            <div class="meta">
+                <p class="title">«{{.title}}»</p>
+            </div>
+        </div>
+        <div class="row">
+            <pre class="code-block"><code class="language-{{.lang_text}}">{{.text}}</code></pre>
+        </div>
+        <div class="row">
+            <div class="meta">
+                <p class="created">发布于 {{.created_str}}</p>
+                {{if .updated}}
+                <p class="updated">更新于 {{.updated_str}}</p>
+                {{end}}
+            </div>
+        </div>
+      <!--   <div class="row">
+            <button class="btn primary" style="min-width: 100px;" onclick="edit()">编辑</button>
+        </div> -->
+        <i>Developed by <u>Pluveto</u></i>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="card dialog" style="margin: auto;">
+            <h4 class="head mt1 mb1">提示</h4>
+            <p class="message">出了点状况。</p>
+            <button class="btn primary" onclick="hideDialog()">OK</button>
+        </div>
+    </div>
+</body>
+<script src="/assets/js/pastex.min.js"></script>
+<script src="https://cdn.staticfile.org/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdn.staticfile.org/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+</html>

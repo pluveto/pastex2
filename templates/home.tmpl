@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/pastex.min.css">
+    <title>分享代码 - Paste v2</title>
+</head>
+
+<body>
+    <div class="c">
+        <h1>Paste X <small>v2</small></h1>
+        <form id="share-form">
+            <div class="row">
+                <div class="6 col">
+                    <label>标题</label>
+                    <input name="title" type="text" class="card w-100" value="片段">
+                </div>
+                <div class="6 col">
+                    <label>语言</label>
+                    <select name="lang" class="card w-100">
+                        <option value="auto">默认（自动判断）</option>
+                        <option value="none">文本</option>
+                        <option value="c">C</option>
+                        <option value="cpp">C++</option>
+                        <option value="py">python</option>
+                        <option value="html">HTML</option>
+                        <option value="md">Markdown</option>
+                        <option value="java">Java</option>
+                        <option value="php">PHP</option>
+                        <option value="css">CSS</option>                        
+                        <option value="go">Go</option>
+                        <option value="js">javascript</option>
+                        <option value="ruby">Ruby</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <textarea name="text" class="card w-100" rows="6"></textarea>
+            </div>
+        </form>
+
+        <div class="row">
+            <button class="btn primary" style="min-width: 100px;" onclick="share()">分享代码</button>
+        </div>
+        <i>Developed by <u>Pluveto</u></i>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="dialog" style="background-color: white;">
+            <h4 class="head mt1 mb1">提示</h4>
+            <p class="message">出了点状况。</p>
+            <button class="btn primary" onclick="hideDialog()">OK</button>
+        </div>
+    </div>
+</body>
+<script src="/assets/js/pastex.min.js"></script>
+</html>
